@@ -8,4 +8,5 @@ require 'rails_helper'
     it { should belong_to :user }
     it { should have_many :tags }
     it { should have_many :favorites }
+    it { should have_many :photos }
   end

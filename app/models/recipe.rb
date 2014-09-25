@@ -8,4 +8,5 @@ class Recipe < ActiveRecord::Base
   has_many :tags
   has_many :types, through: :tags
   has_many :favorites
+  has_many :photos
 end
