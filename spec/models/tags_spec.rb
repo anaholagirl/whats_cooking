@@ -6,4 +6,5 @@ require 'rails_helper'
 
     it { should belong_to :recipe }
     it { should belong_to :type }
+    it { should belong_to :user }
   end

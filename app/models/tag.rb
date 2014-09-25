@@ -5,4 +5,5 @@ class Tag < ActiveRecord::Base
 
   belongs_to :recipe
   belongs_to :type
+  belongs_to :user
 end
