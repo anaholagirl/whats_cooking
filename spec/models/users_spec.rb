@@ -6,5 +6,6 @@ require 'rails_helper'
 
     it { should have_many :recipes }
     it { should have_many :favorites }
+    it { should have_many :photos }
   end
 
