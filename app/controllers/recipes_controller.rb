@@ -1,7 +1,7 @@
 class RecipesController < ApplicationController
 
   def index
-    @recipes = Recipes.all
+    @recipes = Recipe.all
   end
 
   def new
@@ -45,6 +45,6 @@ class RecipesController < ApplicationController
 
 private
   def recipe_params
-    params.require(:recipe).permit(:name, :ingredients, :instructions, :user_id)
+    params.require(:recipe).permit(:name, :ingredients, :instructions,).merge(:user_id => current_user.id)
   end
 end
