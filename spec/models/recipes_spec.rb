@@ -5,4 +5,5 @@ require 'rails_helper'
     it { should validate_presence_of :ingredients }
     it { should validate_presence_of :instructions }
 
+    it { should belong_to :user }
   end
