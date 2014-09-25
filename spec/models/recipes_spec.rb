@@ -6,4 +6,5 @@ require 'rails_helper'
     it { should validate_presence_of :instructions }
 
     it { should belong_to :user }
+    it { should have_many :tags }
   end
