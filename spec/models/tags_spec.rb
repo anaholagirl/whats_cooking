@@ -5,4 +5,5 @@ require 'rails_helper'
     it { should validate_presence_of :type_id }
 
     it { should belong_to :recipe }
+    it { should belong_to :type }
   end

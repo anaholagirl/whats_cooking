@@ -4,4 +4,5 @@ class Tag < ActiveRecord::Base
   validates :type_id, presence: true
 
   belongs_to :recipe
+  belongs_to :type
 end
