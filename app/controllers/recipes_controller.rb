@@ -40,7 +40,7 @@ class RecipesController < ApplicationController
     @recipe = Recipe.find(params[:id])
     @recipe.destroy
     flash[:notice] = "Your recipe has been removed from the Cookbook!"
-    redirect_to recipe_path
+    redirect_to root_path
   end
 
 private

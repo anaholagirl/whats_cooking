@@ -6,13 +6,16 @@
 <% current_user.recipes.each do |recipe| %>
   <li><%= link_to recipe.name, recipe_path(recipe) %></li>
 <% end %>
+<br></br>
 <%= link_to "Create a new Recipe", new_recipe_path, :class => 'btn btn-primary' %>
 
 
 <h2>Here are all your categories: </h2>
-<% if @user.groups != nil %>
-  <% @user.groups.each do |group| %>
-    <li><%= link_to group.name, user_group_path(group) %></li>
+
+  <% current_user.groups.each do |group| %>
+    <li><%= link_to group.name, user_group_path(@user, group) %></li>
   <% end %>
-<% end %>
-<%= link_to "Create a new Category", new_group_path, :class => 'btn btn-primary' %>
+<br></br>
+
+<%= link_to "Create a new Category", new_user_group_path(@user), :class => 'btn btn-primary' %>
+

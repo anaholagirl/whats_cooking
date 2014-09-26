@@ -6,23 +6,16 @@ Rails.application.routes.draw do
 
   root to: 'recipes#index'
 
-  resources :recipes
-  resources :users
   resources :sessions, only: [:new, :create, :destroy]
 
   resources :users do
     resources :groups
-  end
-
-  resources :recipes do
-    resources :photos
-  end
-
-  resources :users do
     resources :tags
   end
 
   resources :recipes do
+    resources :photos
     resources :favorites
   end
+
 end

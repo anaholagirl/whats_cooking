@@ -1,11 +1,11 @@
-<% content_for(:title, "New | Group") %>
+<% content_for(:title, "Edit | Group") %>
 
-<h1>Add a new Recipe Category: </h1>
+<h1>Edit this Recipe Category: </h1>
 
 <%= render('layouts/errors', :object => @group) %>
 
-<%= form_for [:user, @group] do |f| %>
-<div class='form-group'>
+<%= form_for [@user, @group] do |f| %>
+  <div class='form-group'>
     <%= f.label :name %>
     <%= f.text_field :name %>
   </div>
