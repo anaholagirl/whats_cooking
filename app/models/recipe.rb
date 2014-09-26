@@ -6,7 +6,7 @@ class Recipe < ActiveRecord::Base
 
   belongs_to :user
   has_many :tags
-  has_many :types, through: :tags
+  has_many :groups, through: :tags
   has_many :favorites
   has_many :photos
 end

@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   resources :sessions, only: [:new, :create, :destroy]
 
   resources :users do
-    resources :types
+    resources :groups
   end
 
   resources :recipes do
