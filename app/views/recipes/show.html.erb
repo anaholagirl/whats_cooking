@@ -1,3 +1,15 @@
 <% content_for(:title, "Show | Recipes") %>
 
 <h1>Recipe: <%= @recipe.name %></h1>
+
+<% ingredients = @recipe.ingredients.split(',') %>
+<% ingredients.each do |ingredient| %>
+  <li><%= ingredient %></li>
+<% end %>
+
+<p><%= @recipe.instructions %></p>
+<br></br>
+
+<%= link_to "Edit Recipe", edit_recipe_path, :class => 'btn btn-success' %>
+
+<%= link_to "Homepage", root_path, :class => 'btn btn-success' %>
