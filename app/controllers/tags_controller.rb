@@ -9,28 +9,30 @@ class TagsController < ApplicationController
   end
 
   def create
-    @user = User.find(params[:user_id])
-    @tag = @user.tags.new(tag_params)
+    @user = User.find(session[:user_id])
+    @recipe = Recipe.find(params[:recipe_id])
+    @tag = @recipe.tags.new(tag_params)
     if @tag.save
       flash[:notice] = "You have successfully tagged this recipe!"
-      redirect_to user_path(@user)
+      redirect_to recipe_tag_path(@recipe, @tag)
     else
       render 'new'
     end
   end
 
   def show
-    @user = User.find(params[:user_id])
+    @recipe = Recipe.find(params[:recipe_id])
     @tag = Tag.find(params[:id])
   end
 
   def edit
-    @user = User.find(params[:user_id])
+    @recipe = Recipe.find(params[:recipe_id])
     @tag = Tag.find(params[:id])
   end
 
   def update
-    @user = User.find(params[:user_id])
+    @user = User.find(session[:user_id])
+    @recipe = Recipe.find(params[:recipe_id])
     @tag = Tag.find(params[:id])
     if @tag.update(tag_params)
       flash[:notice] = "Your tag has been updated!"
@@ -41,7 +43,8 @@ class TagsController < ApplicationController
   end
 
   def destroy
-    @user = User.find(params[:user_id])
+    @user = User.find(session[:user_id])
+    @recipe = Recipe.find(params[:recipe_id])
     @tag = Tag.find(params[:id])
     @tag.destroy
       flash[:notice] = "Tag was deleted!"

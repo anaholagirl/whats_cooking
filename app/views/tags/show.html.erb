@@ -1,0 +1,14 @@
+<h1>Categories and the Recipes under them: </h1>
+
+<% current_user.groups.each do |group| %>
+  <ul>
+    <li><%= group.name %></li>
+      <% group.recipes.each do |recipe| %>
+        <ul>
+          <li><%= link_to recipe.name, recipe_path(recipe) %></li>
+        </ul>
+      <% end %>
+  </ul>
+<% end %>
+
+<%= link_to "Profile Page", user_path(current_user), :class => 'btn btn-success' %>

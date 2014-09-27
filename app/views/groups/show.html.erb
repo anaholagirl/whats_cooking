@@ -2,7 +2,11 @@
 
 <h1>Category: <%= @group.name %></h1>
 
-
+<% @group.recipes.each do |recipe| %>
+  <ul>
+    <li><%= link_to recipe.name, recipe_path(recipe) %></li>
+  </ul>
+<% end %>
 
 <%= link_to "Edit Category", edit_user_group_path, :class => 'btn btn-success' %>
 

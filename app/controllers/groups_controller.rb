@@ -13,7 +13,7 @@ class GroupsController < ApplicationController
     @group = @user.groups.new(group_params)
     if @group.save
       flash[:notice] = "New Category has been created in the Cookbook!"
-      redirect_to user_path(@user)
+      redirect_to user_group_path
     else
       render 'new'
     end
@@ -34,7 +34,7 @@ class GroupsController < ApplicationController
     @group = Group.find(params[:id])
     if @group.update(group_params)
       flash[:notice] = "Your Category has been updated"
-      redirect_to user_path(@user)
+      redirect_to user_group_path
     else
       render 'edit'
     end

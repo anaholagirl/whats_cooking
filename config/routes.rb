@@ -10,12 +10,12 @@ Rails.application.routes.draw do
 
   resources :users do
     resources :groups
-    resources :tags
   end
 
   resources :recipes do
     resources :photos
     resources :favorites
+    resources :tags
   end
 
 end

@@ -1,0 +1,7 @@
+
+  <%= form_for [:recipe, @tag] do |f| %>
+  <div class='form-group'>
+    <%= f.collection_select :group_id, current_user.groups, :id, :name, prompt: "Select Category" %>
+  </div>
+    <%= f.submit(:class => "btn btn-success") %>
+  <% end %>

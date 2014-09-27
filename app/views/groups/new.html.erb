@@ -4,10 +4,4 @@
 
 <%= render('layouts/errors', :object => @group) %>
 
-<%= form_for [:user, @group] do |f| %>
-<div class='form-group'>
-    <%= f.label :name %>
-    <%= f.text_field :name %>
-  </div>
-<%= f.submit(:class => 'btn btn-success') %>
-<% end %>
+<%= render('form') %>
