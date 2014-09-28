@@ -9,11 +9,11 @@ class GroupsController < ApplicationController
   end
 
   def create
-    @user = User.find(params[:user_id])
+    @user = User.find(session[:user_id])
     @group = @user.groups.new(group_params)
     if @group.save
       flash[:notice] = "New Category has been created in the Cookbook!"
-      redirect_to user_group_path
+      redirect_to user_group_path(@user, @group)
     else
       render 'new'
     end

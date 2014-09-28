@@ -1,21 +1,22 @@
 <% content_for(:title, "Show | Users") %>
 
-<h1>Page for: <%= current_user.name %></h1>
+<div class='container'>
+  <h1>Page for: <%= current_user.name %></h1>
 
-<h2>Here are all your recipes: </h2>
-<% current_user.recipes.each do |recipe| %>
-  <li><%= link_to recipe.name, recipe_path(recipe) %></li>
-<% end %>
-<br></br>
-<%= link_to "Create a new Recipe", new_recipe_path, :class => 'btn btn-primary' %>
-
-
-<h2>Here are all your categories: </h2>
-
-  <% current_user.groups.each do |group| %>
-    <li><%= link_to group.name, user_group_path(@user, group) %></li>
+  <h2>Here are all your recipes: </h2>
+  <% current_user.recipes.each do |recipe| %>
+    <li><%= link_to recipe.name, recipe_path(recipe) %></li>
   <% end %>
-<br></br>
+  <br></br>
+  <%= link_to "Create a new Recipe", new_recipe_path, :class => 'btn btn-primary' %>
 
-<%= link_to "Create a new Category", new_user_group_path(@user), :class => 'btn btn-primary' %>
 
+  <h2>Here are all your categories: </h2>
+
+    <% current_user.groups.each do |group| %>
+      <li><%= link_to group.name, user_group_path(@user, group) %></li>
+    <% end %>
+  <br></br>
+
+  <%= link_to "Create a new Category", new_user_group_path(@user), :class => 'btn btn-primary' %>
+</div>

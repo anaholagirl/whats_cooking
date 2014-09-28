@@ -5,8 +5,6 @@ class FavoritesController < ApplicationController
   end
 
   def new
-    @recipe = Recipe.find(params[:recipe_id])
-    @user = User.find(session[:user_id])
     @favorite = Favorite.new
   end
 
@@ -16,7 +14,7 @@ class FavoritesController < ApplicationController
     @favorite = @recipe.favorites.new(favorite_params)
     if @favorite.save
       flash[:notice] = "This recipe is now a favorite!"
-      redirect_to favorites_path
+      redirect_to recipe_favorites_path(@recipe)
     else
       render 'new'
     end
@@ -24,7 +22,7 @@ class FavoritesController < ApplicationController
 
 private
   def favorite_params
-      params.require(:favorite).permit(:recipe_id, :user_id)
+    params.permit(:recipe_id, :user_id).merge(:user_id => current_user.id)
   end
 end
 

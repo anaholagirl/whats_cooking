@@ -2,18 +2,19 @@
 <html>
 <head>
   <title>WhatsCooking</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+
+   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
   <% if current_user %>
-    <p>Logged in as <%= link_to current_user.name,  user_path(current_user) %></p>
-    <%= link_to 'Log Out', logout_path %>
+    <p id="logging_in">Logged in as <%= link_to current_user.name,  user_path(current_user) %></p>
+    <p id="logging_out"<%= link_to 'Log Out', logout_path %></p>
   <% else %>
-    <p><%= link_to 'Sign Up', signup_path %> or
-       <%= link_to 'Log In', login_path %></p>
+    <p><%= link_to 'Sign Up', signup_path, :class => 'btn btn-success' %> or
+       <%= link_to 'Log In', login_path, :class => 'btn btn-success' %></p>
   <% end %>
 
   <%= flash[:alert] %>

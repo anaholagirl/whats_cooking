@@ -1,0 +1,27 @@
+#logging_in {
+  display: none;
+}
+
+#logging_out {
+  display: none;
+}
+
+.container {
+  margin-left: 25px;
+}
+
+img.banner {
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.welcome {
+  text-align: center;
+  font-size: 50px;
+  color: 000000;
+}
+
+body {
+    background-image: url('');
+}
