@@ -18,6 +18,7 @@
 
   <p><%= button_to 'Make a Favorite', recipe_favorites_path(@recipe), :class => 'btn btn-primary' %></p>
 
+  <p><%= link_to "Homepage", root_path, :class => 'btn btn-success' %></p>
 
     <% if current_user != nil && current_user.id == @recipe.user_id %>
   <p><%= link_to "Edit Recipe", edit_recipe_path, :class => 'btn btn-success' %></p>

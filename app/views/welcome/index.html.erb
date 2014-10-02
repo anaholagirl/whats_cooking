@@ -1,0 +1,36 @@
+<div class="container">
+  <div class="welcome-header">
+     <p> What's Cooking </p>
+    <h2>The place to create and share recipes</h2>
+  </div>
+
+  <div class="col-md-4 welcome-box">
+    <%= link_to image_tag("new_recipe.jpg", id: "create_recipe", :class => " image_box img-responsive"), new_recipe_path %>
+    <h3>New Recipe</h3>
+    <p>Create a New Recipe</p>
+  </div>
+
+  <div class="col-md-4 welcome-box">
+    <%= link_to image_tag("recipe_book.jpg", id: "all_recipes", :class => " image_box img-responsive"), recipes_path %>
+    <h3>Recipes</h3>
+    <p>Check out all of our recipes</p>
+  </div>
+
+  <div class="col-md-4 welcome-box">
+    <div class="feature_recipe">
+      <% @recipeArray = [] %>
+      <% Recipe.all.each do |recipe| %>
+        <% @recipeArray << recipe %>
+      <% end %>
+      <% @sample = @recipeArray.sample %>
+        <p><%= @sample.name %></p>
+        <span class="ingredients"><p><% ingredients = @sample.ingredients.split(',') %>
+          <% ingredients.each do |ingredient| %>
+            <li><%= ingredient %></li>
+          <% end %></p>
+        <p><%= @sample.instructions %></p></span>
+    </div>
+    <h3>Feature Recipe</h3>
+    <p>Check out a sample recipe</p>
+  </div>
+</div>

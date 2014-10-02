@@ -2,7 +2,7 @@ require 'rails_helper'
 
 describe "new group form page" do
 
-  it "should create a new tag if all the fields are filled in." do
+  it "should create a new group if all the fields are filled in." do
     visit 'login'
     user = User.create(:name => 'username', :email => 'user@example.com', :password => 'password', :password_confirmation => 'password')
     fill_in 'Email', :with => 'user@example.com'

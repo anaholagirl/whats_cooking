@@ -1,7 +1,10 @@
 <% content_for(:title, "Sign Up | Users") %>
+<div class="col-md-4 signup_box">
+  <div class="signup_entry">
+    <h1>Create A New Account</h1>
 
-<h1>Create A New Account</h1>
+    <%= render('layouts/errors', object: @user) %>
 
-<%= render('layouts/errors', object: @user) %>
-
-<%= render 'form' %>
+    <%= render 'form' %>
+  </div>
+</div>
