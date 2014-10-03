@@ -1,19 +1,11 @@
 <% content_for(:title, "Home | Recipes") %>
 
 <div class='container'>
-  <h1 class='welcome'>Welcome to</h1>
+  <div class='all_recipes'>
+    <% Recipe.all.each do |recipe| %>
+      <p><li><%= link_to recipe.name, recipe_path(recipe) %></li></p>
 
-    <img src="http://imagizer.imageshack.com/img631/9555/ucXVGS.png" alt: 'Whats Cooking', class="banner"/>
-
-<br>
-<br>
-  <% if current_user != nil %>
-    <p><%= link_to "My Recipe Book", user_path(current_user), :class => 'btn btn-primary' %></p>
-    <br>
-    <p><%= link_to "Create a new Recipe", new_recipe_path, :class => 'btn btn-primary' %></p>
-    <br>
-    <p><%= link_to "Create a new Category", new_user_group_path(current_user), :class => 'btn btn-primary' %></p>
-
-  <% end %>
+    <% end %>
+  </div>
 </div>
 
