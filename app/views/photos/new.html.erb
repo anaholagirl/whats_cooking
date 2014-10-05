@@ -1,0 +1,11 @@
+<h1>Add Photo for <%= @recipe.name %> </h1>
+
+<%= render 'layouts/errors', :object => @photo %>
+
+<%= form_for [:recipe, @photo], :html => { :multipart => true } do |f| %>
+<div class="form-group">
+  <%= f.label :name, "Pick a photo:" %>
+  <%= f.file_field :image %>
+</div>
+<%= submit_tag "Add Photo", class: "btn btn-primary btn-lg" %>
+<% end %>
