@@ -2,6 +2,11 @@
 <% content_for(:title, "Show | Recipes") %>
 
 <div class='container'>
+  <div class='col-md-4 photo_show'>
+    <% @recipe.photos.each do |photo| %>
+      <%= image_tag(photo.image.url(:medium)) %>
+    <% end %>
+  </div>
   <div class='col-md-4 recipe_show'>
     <h1>Recipe: <%= @recipe.name %></h1>
 
@@ -12,22 +17,19 @@
 
     <p><%= @recipe.instructions %></p>
   </div>
-  <div class='col-md-4 photo_show'>
-    <% @recipe.photos.each do |photo| %>
-      <%= image_tag(photo.image.url(:medium)) %>
-    <% end %>
-  </div>
+
   <br></br>
-
-  <%= link_to "Tag this Recipe to a Category", new_recipe_tag_path(@recipe), :class => 'btn btn-primary btn-lg' %>
-
-
-  <%= button_to 'Make a Favorite', recipe_favorites_path(@recipe), :class => 'btn btn-primary btn-lg' %>
+  <div class='recipe_buttons', style='float:right'>
+  <p><%= link_to "Tag this Recipe to a Category", new_recipe_tag_path(@recipe), :class => 'btn btn-primary btn-lg' %>
 
 
-    <% if current_user != nil && current_user.id == @recipe.user_id %>
+  <%= button_to 'Make a Favorite', recipe_favorites_path(@recipe), :class => 'btn btn-primary btn-lg' %></p>
+
+
+  <% if current_user != nil && current_user.id == @recipe.user_id %>
   <p><%= link_to "Add a Photo to your Recipe", new_recipe_photo_path(@recipe), :class => 'btn btn-primary btn-lg' %></p>
 
-  <p><%= link_to "Edit Recipe", edit_recipe_path, :class => 'btn btn-success' %></p>
+  <p><%= link_to "Edit Recipe", edit_recipe_path, :class => 'btn btn-primary btn-lg' %></p>
   <% end %>
+  </div>
 </div>

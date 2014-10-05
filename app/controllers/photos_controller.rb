@@ -8,8 +8,8 @@ class PhotosController < ApplicationController
   def create
     @user = User.find(session[:user_id])
     @recipe = Recipe.find(params[:recipe_id])
-    @photo = @recipe.photos.create(photo_params)
-    if @photo.valid?
+    @photo = @recipe.photos.new(photo_params)
+    if @photo.save
       redirect_to recipe_path(@recipe)
     else
       render 'new'

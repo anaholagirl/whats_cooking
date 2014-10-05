@@ -9,4 +9,6 @@ class Recipe < ActiveRecord::Base
   has_many :groups, through: :tags
   has_many :favorites
   has_many :photos
+
 end
+
