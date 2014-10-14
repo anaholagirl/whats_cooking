@@ -1,16 +1,16 @@
 <div class="container">
   <div class="welcome-header">
      <p> What's Cooking </p>
-    <h2>The place to create and share recipes</h2>
+    <h2><span class='minor_header'>The place to create and share recipes</span></h2>
   </div>
 
-  <div class="col-md-4 welcome-box">
-    <%= link_to image_tag("new_recipe.jpg", id: "create_recipe", :class => " image_box img-responsive"), new_recipe_path %>
+  <div class="col-md-5 welcome-box">
+    <%= link_to image_tag("add_recipe_image.jpg", id: "create_recipe", :class => " image_box img-responsive"), new_recipe_path %>
     <h3>New Recipe</h3>
     <p>Create a New Recipe</p>
   </div>
 
-  <div class="col-md-4 welcome-box">
+  <div class="col-md-3 welcome-box">
     <%= link_to image_tag("recipe_book.jpg", id: "all_recipes", :class => " image_box img-responsive"), recipes_path %>
     <h3>Recipes</h3>
     <p>Check out all of our recipes</p>

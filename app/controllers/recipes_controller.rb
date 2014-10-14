@@ -2,6 +2,10 @@ class RecipesController < ApplicationController
 
   def index
     @recipes = Recipe.all
+    if params[:search]
+      @recipes = Recipe.search(params[:search])
+      redirect_to search_path(@search)
+    end
   end
 
   def new

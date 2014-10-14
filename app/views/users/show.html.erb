@@ -1,25 +1,30 @@
 <% content_for(:title, "Show | Users") %>
 
 <div class='container'>
-  <h1>Page for: <%= current_user.name %></h1>
+  <h1 class="user-show-header">My Recipe Book: <%= current_user.name %></h1>
+  <div class="row">
+    <div class="col-md-4" id="user-recipes">
+      <h2>My recipes: </h2>
+      <% current_user.recipes.each do |recipe| %>
+        <li><%= link_to recipe.name, recipe_path(recipe), class: "user-recipe" %></li>
+      <% end %>
+      <br></br>
+      <%= link_to "Create a new Recipe", new_recipe_path, :class => 'btn btn-success btn-lg' %>
+    </div>
+    <div class="col-md-4" id="user-categories">
+      <h2>My categories: </h2>
 
-  <h2>Here are all your recipes: </h2>
-  <% current_user.recipes.each do |recipe| %>
-    <li><%= link_to recipe.name, recipe_path(recipe) %></li>
-  <% end %>
-  <br></br>
-  <%= link_to "Create a new Recipe", new_recipe_path, :class => 'btn btn-primary' %>
+      <% current_user.groups.each do |group| %>
+        <li><%= link_to group.name, user_group_path(@user, group), class: "user-category" %></li>
+      <% end %>
+      <br></br>
 
+      <p><%= link_to "Create a new Category", new_user_group_path(@user), :class => 'btn btn-success btn-lg' %></p>
+    </div>
+    <div class="col-md-4" id="user-page-pics">
+      <p><div class="sushi-pic"><%= image_tag("sushi3_image.jpg") %></div></p>
+      <p><div class="cake-pic"><%= image_tag("cake2.jpg") %></div></p>
+      <p><div class="pork-pic"><%= image_tag("sweet_sour_pork2.jpg") %></div></p>
+    </div>
+  </div>
 
-  <h2>Here are all your categories: </h2>
-
-    <% current_user.groups.each do |group| %>
-      <li><%= link_to group.name, user_group_path(@user, group) %></li>
-    <% end %>
-  <br></br>
-
-  <p><%= link_to "Create a new Category", new_user_group_path(@user), :class => 'btn btn-primary' %></p>
-
-
-<p><%= link_to "Homepage", root_path, :class => 'btn btn-success' %></p>
-</div>

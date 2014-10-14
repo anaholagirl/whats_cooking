@@ -1,7 +1,12 @@
 <% content_for(:title, "New | Group") %>
 
-<h1>Add a new Recipe Category </h1>
+<div class="col-md-4 new_category_box">
+  <div class="new_category">
+    <h1>Add a new Recipe Category</h1>
+  </br>
+    <%= render('layouts/errors', object: @group) %>
 
-<%= render('layouts/errors', :object => @group) %>
+    <%= render 'form' %>
+  </div>
+</div>
 
-<%= render('form') %>

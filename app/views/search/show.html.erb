@@ -1,0 +1,11 @@
+<div class='container'>
+
+  <h1>Search Results:</h1>
+
+  <ul>
+      <% @search.each do |recipe| %>
+    <li><%= link_to recipe.name, recipe_path(recipe)
+        %></li>
+    <% end %>
+  +</ul>
+</div>

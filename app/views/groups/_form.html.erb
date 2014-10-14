@@ -2,8 +2,8 @@
 <%= form_for [:user, @group] do |f| %>
 <div class='form-group'>
     <%= f.label :name %>
-    <%= f.text_field :name %>
+    <%= f.text_field :name, placeholder: "Enter Category Name" %>
   </div>
-<%= f.submit(:class => 'btn btn-success') %>
+<%= f.submit(:class => 'btn btn-success btn-lg') %>
 <% end %>
 

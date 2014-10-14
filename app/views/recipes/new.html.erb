@@ -1,7 +1,12 @@
 <% content_for(:title, "New | Recipes") %>
 
-<h1>Add a new Recipe </h1>
+<div class="col-md-4 new_recipe_box">
+  <div class="new_recipe">
+    <h1>Add a new Recipe</h1>
+  </br>
+    <%= render('layouts/errors', object: @recipe) %>
 
-<%= render('layouts/errors', :object => @recipe) %>
+    <%= render 'form' %>
+  </div>
+</div>
 
-<%= render 'form' %>

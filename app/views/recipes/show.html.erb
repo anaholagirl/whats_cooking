@@ -20,16 +20,16 @@
 
   <br></br>
   <div class='recipe_buttons', style='float:right'>
-  <p><%= link_to "Tag this Recipe to a Category", new_recipe_tag_path(@recipe), :class => 'btn btn-primary btn-lg' %>
+  <p><%= link_to "Tag this Recipe to a Category", new_recipe_tag_path(@recipe), :class => 'btn btn-success btn-lg' %>
 
 
-  <%= button_to 'Make a Favorite', recipe_favorites_path(@recipe), :class => 'btn btn-primary btn-lg' %></p>
+  <%= button_to 'Make a Favorite', recipe_favorites_path(@recipe), :class => 'btn btn-success btn-lg' %></p>
 
 
   <% if current_user != nil && current_user.id == @recipe.user_id %>
-  <p><%= link_to "Add a Photo to your Recipe", new_recipe_photo_path(@recipe), :class => 'btn btn-primary btn-lg' %></p>
+  <p><%= link_to "Add a Photo to your Recipe", new_recipe_photo_path(@recipe), :class => 'btn btn-success btn-lg' %></p>
 
-  <p><%= link_to "Edit Recipe", edit_recipe_path, :class => 'btn btn-primary btn-lg' %></p>
+  <p><%= link_to "Edit Recipe", edit_recipe_path, :class => 'btn btn-success btn-lg' %></p>
   <% end %>
   </div>
 </div>

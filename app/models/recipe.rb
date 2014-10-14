@@ -10,5 +10,8 @@ class Recipe < ActiveRecord::Base
   has_many :favorites
   has_many :photos
 
+  def self.search(search)
+    where("ingredients like ?", "%#{search}%")
+  end
 end
 

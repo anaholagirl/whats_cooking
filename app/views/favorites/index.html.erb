@@ -1,8 +1,24 @@
-<h1>My Favorite Recipes</h1>
-
-<% current_user.favorites.each do |favorite| %>
-  <ul>
-    <li><%= link_to favorite.recipe.name, recipe_path(favorite) %></li>
-  </ul>
- <% end %>
+<div class="container">
+  <h1 class="favorite-header">My Favorite Recipes</h1>
+  <div class="row">
+    <div class="col-md-4" id="favorite pics1">
+      <p><div class="favorite-pic"><%= image_tag("ribs2.jpg") %></div></p>
+      <p><div class="favorite-pic"><%= image_tag("fruitsalad3.jpg") %></div></p>
+      <p><div class="favorite-pic"><%= image_tag("dessert2.jpg") %></div></p>
+    </div>
+    <div class="col-md-4" id="my-favorites">
+      <br>
+      <% @user.favorites.each do |favorite| %>
+        <ul>
+          <li><%= link_to favorite.recipe.name, recipe_path(favorite.recipe), class: "favorite-recipe" %></li>
+        </ul>
+       <% end %>
+    </div>
+    <div class="col-md-4" id="favorites-pics">
+      <p><div class="favorite-pic"><%= image_tag("cupcakes3.jpg") %></div></p>
+      <p><div class="favorite-pic"><%= image_tag("steak3.jpg") %></div></p>
+      <p><div class="favorite-pic"><%= image_tag("m&ms.jpg") %></div></p>
+    </div>
+  </div>
+</div>
 

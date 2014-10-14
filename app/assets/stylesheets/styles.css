@@ -14,10 +14,11 @@
   margin-top: 150px;
   margin-left: 400px;
   margin-right: 425px;
-  background: #ccffff;
+  /*background: #ccffff;*/
+  background-image: url('http://img.photobucket.com/albums/v221/whitetulips/beige-seamless-wallpaper.jpg');
   text-align: center;
   font-size: 1.5em;
-  border: 3px blue solid;
+  border: 3px green solid;
   border-radius: 15px;
   font-family: Apple Chancery;
   font-weight: bold;
@@ -29,13 +30,18 @@
   margin-top: 100px;
   margin-left: 400px;
   margin-right: 425px;
-  background: #ccffff;
+  background-image: url('http://img.photobucket.com/albums/v221/whitetulips/beige-seamless-wallpaper.jpg');
   text-align: center;
   font-size: 1.5em;
-  border: 3px blue solid;
+  border: 3px green solid;
   border-radius: 15px;
-  font-family: Apple Chancery;
+  /*font-family: Apple Chancery;*/
+  font-family: Lucida Calligraphy;
   font-weight: bold;
+}
+
+.navbar-form {
+  padding-bottom: 10px;
 }
 
 .container {
@@ -43,7 +49,7 @@
 }
 
 body {
-    background-image: url('http://pgs.aaua.edu.ng/frontend/assets/img/bg/2.jpg');
+    background-image: url('http://www.zingerbug.com/Backgrounds/background_images/light_green_ornate_floral_wallpaper_tileable.jpg');
 }
 
 .welcome-header {
@@ -51,30 +57,35 @@ body {
   margin-left: 150px;
   margin-right: 150px;
   text-align: center;
-  border: 4px solid blue;
-  border-radius: 15px;
-  background-color: #dff0d8;
-  font-family: Apple Chancery;
-  font-size: 3.5em;
+  /*border: 4px solid blue;
+  border-radius: 15px;*/
+  /*background-color: #dff0d8;*/
+  font-family: Lucida Calligraphy;
+  font-size: 4em;
   font-weight: bold;
   margin-top: 40px;
+  background-image: url('http://ilikewalls.com/wallpaper/28/7/simple-background-designs-4.jpg');
+}
+
+.minor_header {
+  font-family: Lucida Calligraphy;
 }
 
 #all_recipes {
-  height: 400px;
+  height: 300px;
   width: 300px;
   margin-top: 50px;
 }
 
 #create_recipe {
-  height: 400px;
-  width: 300px;
+  height: 300px;
+  width: 400px;
   margin-top: 50px;
 }
 
 .welcome-box {
   text-align: center;
-  font-family: Apple Chancery;
+  font-family: Lucida Calligraphy;
   font-weight: bold;
   font-size: 2em;
 
@@ -82,10 +93,12 @@ body {
 
 .feature_recipe {
   margin-top: 35px;
-  border: 3px blue solid;
+  border: 3px green solid;
   border-radius: 15px;
   padding: 10px;
-  background: #ccffff;
+  font-size: .75em;
+  /*background: #ccffff;*/
+  background-image: url('http://img.photobucket.com/albums/v221/whitetulips/beige-seamless-wallpaper.jpg');
 }
 
 .ingredients {
@@ -94,11 +107,11 @@ body {
 
 .recipe_show {
   margin-top: 35px;
-  border: 3px blue solid;
+  border: 3px green solid;
   border-radius: 15px;
   padding: 10px;
-  background: #ccffff;
-  font-family: Apple Chancery;
+  background-image: url('http://img.photobucket.com/albums/v221/whitetulips/beige-seamless-wallpaper.jpg');
+  font-family: Lucida Calligraphy;
   font-weight: bold;
   font-size: 1.25em;
 }
@@ -107,13 +120,120 @@ body {
   margin-top: 35px;
   padding: 10px;
 }
+
+.all-recipe-header {
+  font-family: Lucida Calligraphy;
+  text-align: center;
+}
+
 .all_recipes_show {
   margin-top: 35px;
-  border: 3px blue solid;
+  border: 3px green solid;
   border-radius: 15px;
   padding: 10px;
-  background: #ccffff;
+  background-image: url('http://img.photobucket.com/albums/v221/whitetulips/beige-seamless-wallpaper.jpg');
   font-family: Apple Chancery;
   font-weight: bold;
   font-size: 1.5em;
+}
+
+.new_recipe_box {
+  max-width: 400px;
+  padding: 19px 29px 29px;
+  margin-top: 75px;
+  margin-left: 400px;
+  margin-right: 425px;
+  background-image: url('http://img.photobucket.com/albums/v221/whitetulips/beige-seamless-wallpaper.jpg');
+  text-align: center;
+  font-size: 1.5em;
+  border: 3px green solid;
+  border-radius: 15px;
+  font-family: Apple Chancery;
+  font-weight: bold;
+}
+
+.new_category_box {
+  max-width: 400px;
+  padding: 19px 29px 29px;
+  margin-top: 150px;
+  margin-left: 400px;
+  margin-right: 425px;
+  background-image: url('http://img.photobucket.com/albums/v221/whitetulips/beige-seamless-wallpaper.jpg');
+  text-align: center;
+  font-size: 1.5em;
+  border: 3px green solid;
+  border-radius: 15px;
+  font-family: Apple Chancery;
+  font-weight: bold;
+}
+
+#category-recipes {
+  display: block;
+  /*margin-left: auto;
+  margin-right: auto;*/
+  text-align: center;
+}
+
+.category-recipe {
+  color: black;
+  font-family: Chalkboard;
+}
+
+.category-header {
+  font-family: Lucida Calligraphy;
+  font-weight: bold;
+}
+
+.sushi-pic {
+   -webkit-transform: rotate(7deg);
+   padding-bottom: 15px;
+}
+
+.user-show-header {
+  font-family: Lucida Calligraphy;
+  font-weight: bold;
+}
+
+
+.cake-pic {
+   -webkit-transform: rotate(-7deg);
+   padding-bottom: 20px;
+   padding-left: 35px;
+}
+
+.pork-pic {
+   -webkit-transform: rotate(5deg);
+   padding-top: 20px;
+}
+
+#user-recipes {
+  font-family: Lucida Calligraphy;
+  color: black;
+}
+
+#user-categories {
+  font-family: Lucida Calligraphy;
+  color: black;
+}
+
+.user-recipe {
+  color: black;
+  font-family: Chalkboard;
+}
+
+.user-category {
+  color: black;
+  font-family: Chalkboard;
+}
+
+.favorite-header {
+  font-family: Lucida Calligraphy;
+  text-align: center;
+}
+
+.favorite-recipe {
+  color: black;
+  font-family: Chalkboard;
+  font-size: 1.5em;
+  text-align: center;
 }
