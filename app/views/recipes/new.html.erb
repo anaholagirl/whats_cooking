@@ -1,12 +1,19 @@
 <% content_for(:title, "New | Recipes") %>
-
-<div class="col-md-4 new_recipe_box">
-  <div class="new_recipe">
-    <h1>Add a new Recipe</h1>
-  </br>
-    <%= render('layouts/errors', object: @recipe) %>
-
-    <%= render 'form' %>
+<div class="container">
+  <div class="col-md-4" id="border-left">
+    <%= image_tag("border.jpg") %>
   </div>
-</div>
+  <div class="col-md-4 new_recipe_box">
+    <div class="new_recipe">
+      <h1>Add a new Recipe</h1>
 
+      <%= render('layouts/errors', object: @recipe) %>
+
+      <p><%= render 'form' %></p>
+    </div>
+  </div>
+  <div class="col-md-4" id="border-right">
+    <%= image_tag("border.jpg") %>
+  </div>
+
+</div>

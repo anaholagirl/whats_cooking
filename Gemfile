@@ -12,6 +12,7 @@ gem 'bootstrap-sass', '~> 3.2.0'
 gem 'autoprefixer-rails'
 gem 'foundation-rails'
 gem 'paperclip', '~> 4.2'
+gem 'textacular'
 
 group :development do
   gem 'better_errors'

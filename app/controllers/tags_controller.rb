@@ -14,7 +14,7 @@ class TagsController < ApplicationController
     @tag = @recipe.tags.new(tag_params)
     if @tag.save
       flash[:notice] = "You have successfully tagged this recipe!"
-      redirect_to recipe_tag_path(@recipe, @tag)
+      redirect_to user_groups_path(@user)
     else
       render 'new'
     end

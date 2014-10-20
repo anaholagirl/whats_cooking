@@ -12,8 +12,8 @@
   max-width: 400px;
   padding: 19px 29px 29px;
   margin-top: 150px;
-  margin-left: 400px;
-  margin-right: 425px;
+ /* margin-left: 400px;
+  margin-right: 425px;*/
   /*background: #ccffff;*/
   background-image: url('http://img.photobucket.com/albums/v221/whitetulips/beige-seamless-wallpaper.jpg');
   text-align: center;
@@ -27,9 +27,9 @@
 .signup_box {
   max-width: 400px;
   padding: 19px 29px 29px;
-  margin-top: 100px;
-  margin-left: 400px;
-  margin-right: 425px;
+  margin-top: 75px;
+/*  margin-left: 400px;
+  margin-right: 425px;*/
   background-image: url('http://img.photobucket.com/albums/v221/whitetulips/beige-seamless-wallpaper.jpg');
   text-align: center;
   font-size: 1.5em;
@@ -71,16 +71,17 @@ body {
   font-family: Lucida Calligraphy;
 }
 
-#all_recipes {
-  height: 300px;
-  width: 300px;
-  margin-top: 50px;
-}
-
 #create_recipe {
   height: 300px;
   width: 400px;
   margin-top: 50px;
+}
+
+#all_recipes {
+  height: 300px;
+  width: 400px;
+  margin-top: 50px;
+  padding-right: 15px;
 }
 
 .welcome-box {
@@ -116,6 +117,31 @@ body {
   font-size: 1.25em;
 }
 
+.new_photo_box {
+  max-width: 400px;
+  padding: 19px 29px 29px;
+  margin-top: 75px;
+  margin-left: 400px;
+  margin-right: 425px;
+  background-image: url('http://img.photobucket.com/albums/v221/whitetulips/beige-seamless-wallpaper.jpg');
+  text-align: center;
+  font-size: 1.5em;
+  border: 3px green solid;
+  border-radius: 15px;
+  font-family: Apple Chancery;
+  font-weight: bold;
+}
+
+#add_photo_form {
+  font-size: 1.25em;
+  text-align: left;
+  margin-top: 15px;
+}
+
+.add_photo_button {
+  margin-top: 5px;
+}
+
 .photo_show {
   margin-top: 35px;
   padding: 10px;
@@ -137,7 +163,19 @@ body {
   font-size: 1.5em;
 }
 
-.new_recipe_box {
+.search_for_recipes {
+  margin-top: 35px;
+  border: 3px green solid;
+  border-radius: 15px;
+  padding: 10px;
+  background-image: url('http://img.photobucket.com/albums/v221/whitetulips/beige-seamless-wallpaper.jpg');
+  font-family: Apple Chancery;
+  font-weight: bold;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+.edit_recipe_box {
   max-width: 400px;
   padding: 19px 29px 29px;
   margin-top: 75px;
@@ -152,14 +190,64 @@ body {
   font-weight: bold;
 }
 
-.new_category_box {
+.new_recipe_box {
+  max-width: 400px;
+  padding: 19px 29px 29px;
+  margin-top: 50px;
+/*  margin-left: 400px;
+  margin-right: 425px;*/
+  background-image: url('http://img.photobucket.com/albums/v221/whitetulips/beige-seamless-wallpaper.jpg');
+  text-align: center;
+  font-size: 1.5em;
+  border: 3px green solid;
+  border-radius: 15px;
+  font-family: Apple Chancery;
+  font-weight: bold;
+}
+
+.new_recipe {
+  font-size: 1.1em;
+}
+
+.new_tag_box {
   max-width: 400px;
   padding: 19px 29px 29px;
   margin-top: 150px;
-  margin-left: 400px;
-  margin-right: 425px;
+/*  margin-left: 400px;
+  margin-right: 425px;*/
   background-image: url('http://img.photobucket.com/albums/v221/whitetulips/beige-seamless-wallpaper.jpg');
   text-align: center;
+  font-size: 1.5em;
+  border: 3px green solid;
+  border-radius: 15px;
+  font-family: Apple Chancery;
+  font-weight: bold;
+}
+
+.new_category_box {
+  max-width: 400px;
+  padding: 19px 29px 29px;
+ /* margin-top: 150px;
+  margin-left: 400px;
+  margin-right: 425px;
+ */ background-image: url('http://img.photobucket.com/albums/v221/whitetulips/beige-seamless-wallpaper.jpg');
+  text-align: center;
+  font-size: 1.5em;
+  border: 3px green solid;
+  border-radius: 15px;
+  font-family: Apple Chancery;
+  font-weight: bold;
+  margin-top: 175px;
+}
+
+.category_show_box {
+  max-width: 400px;
+  padding-left: 20px;
+  padding-bottom: 30px;
+  margin-top: 75px;
+/*  margin-left: 400px;
+  margin-right: 425px;*/
+  background-image: url('http://img.photobucket.com/albums/v221/whitetulips/beige-seamless-wallpaper.jpg');
   font-size: 1.5em;
   border: 3px green solid;
   border-radius: 15px;
@@ -181,6 +269,21 @@ body {
 
 .category-header {
   font-family: Lucida Calligraphy;
+  font-weight: bold;
+}
+
+.edit_category_box {
+  max-width: 400px;
+  padding: 19px 29px 29px;
+  margin-top: 75px;
+  margin-left: 400px;
+  margin-right: 425px;
+  background-image: url('http://img.photobucket.com/albums/v221/whitetulips/beige-seamless-wallpaper.jpg');
+  text-align: center;
+  font-size: 1.5em;
+  border: 3px green solid;
+  border-radius: 15px;
+  font-family: Apple Chancery;
   font-weight: bold;
 }
 
@@ -209,11 +312,13 @@ body {
 #user-recipes {
   font-family: Lucida Calligraphy;
   color: black;
+  font-size: 1.5em;
 }
 
 #user-categories {
   font-family: Lucida Calligraphy;
   color: black;
+  font-size: 1.5em;
 }
 
 .user-recipe {
@@ -236,4 +341,20 @@ body {
   font-family: Chalkboard;
   font-size: 1.5em;
   text-align: center;
+}
+
+#border-left {
+  text-align: left;
+  margin-top: 5px;
+}
+
+#border-right {
+  text-align: right;
+  margin-top: 5px;
+}
+
+.clear_search {
+  text-align: center;
+  font-size: 1.25em;
+  color: green;
 }

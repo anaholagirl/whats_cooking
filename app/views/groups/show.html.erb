@@ -20,6 +20,7 @@
     </div>
     <div class="col-md-6" id="category-buttons">
       <p><%= link_to "Edit Category", edit_user_group_path, :class => 'btn btn-success btn-lg' %></p>
+      <p><%= link_to "See All Categories", user_groups_path, :class => 'btn btn-success btn-lg' %></p>
 
       <% if current_user && @group.user_id == current_user.id %>
       <p><%= link_to "Remove Category", user_group_path(@user, @group), :class => 'btn btn-success btn-lg', data: { confirm: 'Are you sure you want to delete this category?',

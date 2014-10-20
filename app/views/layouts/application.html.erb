@@ -20,15 +20,9 @@
         <%= link_to "What's Cooking", root_path,:class => 'btn btn-warning btn-lg' %>
         <% if current_user != nil %>
           <%= link_to "My Recipe Book", user_path(current_user), :class => 'btn btn-warning btn-lg' %>
+          <%= link_to "My Categories", user_groups_path(current_user), :class => 'btn btn-warning btn-lg' %>
           <%= link_to "My Favorites", recipe_favorites_path(current_user), :class => 'btn btn-warning btn-lg' %>
         <% end %>
-        <div class="navbar-form " style='float:right' role="search">
-          <%= form_tag(recipes_path, :method => "get", id: "search-form", html: {class: 'form-group'}) do %>
-              <%= text_field_tag :search, params[:search], placeholder: "Search by Ingredient", class: "form-control" %>
-          <%= submit_tag "Search", :class => 'btn btn-warning btn-lg', :name => nil%>
-            <% end %>
-        </div>
-
       </div>
     </div>
     <div class="navbar-collapse collapse navbar-responsive-collapse">
@@ -52,10 +46,14 @@
        <%= link_to 'Log In', login_path, :class => 'btn btn-success' %></p>
   <% end %>
 
-  <%= flash[:alert] %>
-  <%= flash[:notice] %>
+ <p class="bg-success", id="notice"><%= flash[:notice] %></p>
+  <p class="bg-danger", id="alert"><%= flash[:alert] %></p>
 
 <%= yield %>
+
+  <div class="navbar navbar-default navbar-fixed-bottom">
+    <p id="copyright">&copy; 2014 Linda Gibson</p>
+  </div>
 
 </body>
 </html>

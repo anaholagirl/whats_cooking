@@ -1,12 +1,20 @@
 <% content_for(:title, "New | Group") %>
+<div class='container'>
+  <div class='row'>
+    <div class="col-md-4" id="border-left">
+    <%= image_tag("border.gif") %>
+    </div>
+    <div class="col-md-4 new_category_box">
+      <div class="new_category">
+        <h1>Add a new Recipe Category</h1>
+      </br>
+        <%= render('layouts/errors', object: @group) %>
 
-<div class="col-md-4 new_category_box">
-  <div class="new_category">
-    <h1>Add a new Recipe Category</h1>
-  </br>
-    <%= render('layouts/errors', object: @group) %>
-
-    <%= render 'form' %>
+        <%= render 'form' %>
+      </div>
+    </div>
+    <div class="col-md-4" id="border-right">
+    <%= image_tag("border.gif") %>
+    </div>
   </div>
 </div>
-

@@ -1,0 +1,21 @@
+<div id="search_recipes", remote: true>
+  <h1>Search Results:</h1>
+  <% @recipes.sort.each do |recipe| %>
+    <ul>
+      <% if recipe.photos.any? %>
+        <div class='recipe_thumb' >
+          <li><% recipe.photos.each do |photo| %>
+                    <!-- binding.pry -->
+            <%= image_tag(photo.image.url(:thumb)) %>
+          <% end %>
+        <%= link_to recipe.name, recipe_path(recipe) %></li>
+        </div>
+        <% else %>
+        <li><%= link_to recipe.name, recipe_path(recipe) %></li>
+      <% end %>
+    </ul>
+  <% end %>
+  <div class="clear_search", remote: true>
+    <%= link_to "Clear Search", name: nil, :class => "btn btn-success btn-lg" %>
+  </div>
+</div>

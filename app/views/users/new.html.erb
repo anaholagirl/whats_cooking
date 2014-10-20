@@ -1,10 +1,21 @@
 <% content_for(:title, "Sign Up | Users") %>
-<div class="col-md-4 signup_box">
-  <div class="signup_entry">
-    <h1>Create A New Account</h1>
 
-    <%= render('layouts/errors', object: @user) %>
+<div class='container'>
+  <div class="row">
+    <div class="col-md-4" id="border-left">
+      <%= image_tag("border.gif") %>
+    </div>
+    <div class="col-md-4 signup_box">
+      <div class="signup_entry">
+        <h1>Create A New Account</h1>
 
-    <%= render 'form' %>
+        <%= render('layouts/errors', object: @user) %>
+
+        <%= render 'form' %>
+      </div>
+    </div>
+    <div class="col-md-4" id="border-right">
+      <%= image_tag("border.gif") %>
+    </div>
   </div>
 </div>

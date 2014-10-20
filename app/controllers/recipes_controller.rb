@@ -1,10 +1,16 @@
 class RecipesController < ApplicationController
 
+  before_filter :authorize, only: [:edit, :update, :new, :create, :destroy]
+
   def index
     @recipes = Recipe.all
-    if params[:search]
-      @recipes = Recipe.search(params[:search])
-      redirect_to search_path(@search)
+    @users = User.all
+    if params[:search].blank? == false
+      @recipes = Recipe.basic_search(params[:search])
+    end
+    respond_to do |format|
+      format.html
+      format.js
     end
   end
 
