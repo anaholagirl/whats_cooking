@@ -29,8 +29,10 @@ This is still a work in progress with some minor bugs and fixes that need to be 
  Now, it will be available at `http://localhost:3000`.
 
  ##Author:
+
  Linda Gibson
 
  ##License
+
  MIT
 
