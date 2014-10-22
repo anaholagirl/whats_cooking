@@ -1,9 +1,0 @@
-<h1>Category Listings:</h1>
-
-<% @types.each do |type| %>
-  <li><%= link_to type.name, type_path(type) %></li>
-<% end %>
-
-<%= link_to "Create a new Category", new_type_path, :class => 'btn btn-primary' %>
-
-<%= link_to "Homepage", root_path, :class => 'btn btn-success' %>
