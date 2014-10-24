@@ -19,12 +19,10 @@
     <div class="col-md-4 welcome-box">
       <div class="feature_recipe">
         <% @recipeArray = [] %>
-        <% if @recipeArray.empty? == true %>
-          <p>Enter a recipe so we can feature it!</p>
-        <% else %>
-          <% Recipe.all.each do |recipe| %>
-            <% @recipeArray << recipe %>
-          <% end %>
+        <% Recipe.all.each do |recipe| %>
+          <% @recipeArray << recipe %>
+        <% end %>
+        <% if @recipeArray != nil %>
           <% @sample = @recipeArray.sample %>
             <p><%= @sample.name %></p>
             <span class="ingredients"><p><% ingredients = @sample.ingredients.split(',') %>
@@ -32,6 +30,8 @@
                 <li><%= ingredient %></li>
               <% end %></p>
             <p><%= @sample.instructions %></p></span>
+          <% else %>
+            <p>Enter a recipe so we can feature it!</p>
           <% end %>
       </div>
       <h3>Feature Recipe</h3>
