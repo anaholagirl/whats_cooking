@@ -52,7 +52,14 @@
 <%= yield %>
 
   <div class="navbar navbar-default navbar-fixed-bottom">
-    <p id="copyright">&copy; 2014 Linda Gibson</p>
+    <div class="navbar-copyright navbar-left" id="copyright">
+      &copy; 2014 Linda Gibson
+    </div>
+    <div class="navbar-social navbar-right">
+    <%= link_to "http://www.facebook.com/?sk=ff", :target => "_blank" do %>
+    <%= image_tag("fb-button.jpg", :size => "50x50", :class => "facebook_icon", :alt => "Facebook") %>
+    <% end %>
+    </div>
   </div>
 
 </body>
