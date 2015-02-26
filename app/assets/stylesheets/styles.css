@@ -90,14 +90,17 @@ Signup Page
 }
 
 .signup_box {
-  max-width: 400px;
-  padding: 19px 29px 29px;
-  margin-top: 75px;
+  max-width: 40%;
+  /*padding: 19px 29px 29px;*/
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  /*margin-top: 75px;*/
 /*  margin-left: 400px;
   margin-right: 425px;*/
   background-image: url('http://img.photobucket.com/albums/v221/whitetulips/beige-seamless-wallpaper.jpg');
   text-align: center;
-  font-size: 1.5em;
+  font-size: 1.25em;
   border: 3px green solid;
   border-radius: 15px;
   /*font-family: Apple Chancery;*/
@@ -424,7 +427,7 @@ page borders
   float: left;
   max-width: 15%;
   text-align: left;
-  margin: 8%;
+  margin: 2.5%%;
   padding: 0;
 }
 
@@ -432,7 +435,7 @@ page borders
   float: right;
   max-width: 15%;
   text-align: right;
-  margin: 8%;
+  margin: 2.5%;
   padding: 0;
 }
 
