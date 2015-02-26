@@ -214,8 +214,10 @@ body {
   margin-top: 15px;
 }
 
-.add_photo_button {
+#photo_image {
   margin-top: 5px;
+  padding-top: 10px;
+  height: 40px;
 }
 
 .photo_show {

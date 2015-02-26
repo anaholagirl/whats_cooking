@@ -28,6 +28,9 @@ This is still a work in progress with some minor bugs and fixes that need to be 
 
  Now, it will be available at `http://localhost:3000`.
 
+##Visit the Website:
+
+ See the website in action at what's-cooking-101.herokuapp.com
 
 ##Author:
 
