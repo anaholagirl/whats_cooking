@@ -1,16 +1,46 @@
-#logging_in {
-  padding-right: 35px;
-  padding-top: 15px;
+/**********************
+HEADER
+***********************/
+header {
+  /*float: left;*/
+  margin: 0 0 5px 0;
+  padding: 20px 0 0 0;
+  width: 100%;
+  background-color: #D6FFD6;
 }
 
-#need_signup {
-  padding-right: 35px;
-  padding-top: 15px;
+#logo {
+  float: left;
+/*  text-align: center;*/
+  margin-left: 20px;
 }
+
+#signin {
+  float: right;
+  margin-right: 20px;
+  margin-top: 0;
+  padding: 0;
+  font-size: 1em;
+}
+
+#logging_in {
+  display: inline-block;
+}
+
+.nav-right {
+  display: inline-block;
+}
+
+
+/******************************
+Login Page
+*******************************/
 
 .login_box {
-  max-width: 400px;
-  padding: 19px 29px 29px;
+
+  max-width: 35%;
+  padding: 2%;
+  margin: 0 auto;
   margin-top: 150px;
  /* margin-left: 400px;
   margin-right: 425px;*/
@@ -22,6 +52,20 @@
   border-radius: 15px;
   font-family: Apple Chancery;
   font-weight: bold;
+}
+
+#logging_in {
+  padding-right: 35px;
+  padding-top: 15px;
+}
+
+/******************************
+Signup Page
+*******************************/
+
+#need_signup {
+  padding-right: 35px;
+  padding-top: 15px;
 }
 
 .signup_box {
@@ -40,9 +84,17 @@
   font-weight: bold;
 }
 
+/******************************
+navbar
+*******************************/
+
 .navbar-form {
   padding-bottom: 10px;
 }
+
+/******************************
+body
+*******************************/
 
 .container {
   margin-left: 25px;
@@ -343,14 +395,24 @@ body {
   text-align: center;
 }
 
+/******************************
+page borders
+*******************************/
+
 #border-left {
+  float: left;
+  max-width: 15%;
   text-align: left;
-  margin-top: 5px;
+  margin: 8%;
+  padding: 0;
 }
 
 #border-right {
+  float: right;
+  max-width: 15%;
   text-align: right;
-  margin-top: 5px;
+  margin: 8%;
+  padding: 0;
 }
 
 .clear_search {

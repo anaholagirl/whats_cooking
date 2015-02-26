@@ -1,0 +1,26 @@
+<header>
+
+    <nav class="nav-header" id="page-header">
+      <div class="nav-left" id="logo">
+      <%= link_to "What's Cooking", root_path, :class => 'btn btn-warning btn-lg' %>
+      </div>
+      <div class="nav-right" id="pages-nav">
+        <% if current_user != nil %>
+          <%= link_to "My Recipe Book", user_path(current_user), :class => 'btn btn-warning btn-md' %>
+          <%= link_to "My Categories", user_groups_path(current_user), :class => 'btn btn-warning btn-md' %>
+          <%= link_to "My Favorites", recipe_favorites_path(current_user), :class => 'btn btn-warning btn-md' %>
+        <% end %>
+      </div>
+      <div class="nav-right" id="signin">
+        <% if current_user %>
+            <div id="logging_in">Logged in as <%= link_to current_user.name,  user_path(current_user), :class => 'btn btn-warning btn-md' %>
+            <%= link_to 'Log Out', logout_path, :class => 'btn btn-warning btn-md' %></div>
+          <% else %>
+            <div id="need_signup"><%= link_to 'Sign Up', signup_path, :class => 'btn btn-warning btn-md' %> or
+            <%= link_to 'Log In', login_path, :class => 'btn btn-warning btn-md' %></div>
+        <% end %>
+      </div>
+    </nav>
+
+
+  </header>
