@@ -2,6 +2,13 @@
   <div class="nav-footer" id="footer">
 <!--     <a href="#"><img src="img/twitter-wrap.png" alt="Twitter Logo" class="social-icon"></a>
     <a href="#"><img src="img/facebook-wrap.png" alt="Facebook Logo" class="social-icon"></a> -->
-    <p id="copyright">&copy; 2015 Linda Gibson</p>
+    <div id="copyright">
+      &copy; 2015 Linda Gibson
+
+    <!-- <span class="navbar-social navbar-right"> -->
+      <%= link_to "http://www.facebook.com/?sk=ff", :target => "_blank" do %>
+      <%= image_tag("fb-button.jpg", :size => "50x50", :class => "social_icon", :alt => "Facebook") %>
+      <% end %>
+    <!-- </span> -->
   </div>
 </footer>

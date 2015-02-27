@@ -31,26 +31,36 @@ header {
 }*/
 
 .nav-right {
+  float: right;
   display: inline-block;
-}
+ }
 
 /**********************
 FOOTER
 ***********************/
 
 footer {
-  clear: both;
-  padding-top: 15px;
-  padding-bottom: 15px;
+  /*clear: both;*/
+  position: fixed;
+  bottom: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
   width: 100%;
   background-color: #e1eed7;
 }
 
 #footer {
+  /*display: inline-block;*/
+  /*margin-bottom: 0;*/
   margin-left: 50px;
   text-align: left;
   color: #666B6E;
   font-size: 1em;
+}
+
+.social_icon {
+  display: inline-block;
+  float: right;
 }
 
 /******************************
@@ -59,10 +69,18 @@ Login Page
 
 .login_box {
 
-  max-width: 35%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 350px;
+  height: 375px;
+  margin-top: -200px; /* Half the height */
+  margin-left: -175px; /* Half the width */
+
+/*  max-width: 35%;
   padding: 2%;
   margin: 0 auto;
-  margin-top: 150px;
+  margin-top: 150px;*/
  /* margin-left: 400px;
   margin-right: 425px;*/
   /*background: #ccffff;*/
@@ -90,11 +108,19 @@ Signup Page
 }
 
 .signup_box {
-  max-width: 40%;
+ position: absolute;
+   top: 50%;
+   left: 50%;
+   width: 400px;
+   height: 500px;
+   margin-top: -250px; /* Half the height */
+   margin-left: -200px; /* Half the width */
+
+  /*max-width: 40%;*/
   /*padding: 19px 29px 29px;*/
-  display: block;
+/*  display: block;
   margin-left: auto;
-  margin-right: auto;
+  margin-right: auto;*/
   /*margin-top: 75px;*/
 /*  margin-left: 400px;
   margin-right: 425px;*/
