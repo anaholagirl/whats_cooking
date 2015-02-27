@@ -1,0 +1,22 @@
+/**********************
+css rule for digital screen
+and at least min width of 480px
+(above a smart phone or mobile device, like a tablet
+since already created main css for mobile)
+***********************/
+
+@media screen and (min-width: 480px) {
+
+
+
+
+
+/**********************
+css rule for digital screen and
+at least min width of 660px
+(next break point above tablet, maybe laptop)
+***********************/
+
+@media screen and (min-width: 660px) {
+
+
