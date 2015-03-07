@@ -8,11 +8,13 @@ describe "new group form page" do
     fill_in 'Email', :with => 'user@example.com'
     fill_in 'Password', :with => 'password'
     click_button 'Log In'
-    expect(page).to have_content "Welcome"
+    expect(page).to have_content 'Logged in as'
+    click_link 'My Recipe Book'
+    expect(page).to have_content 'My Recipe Book'
     click_link 'Create a new Category'
     expect(page).to have_content "Add a new Recipe Category"
-    fill_in 'name', :with => 'category name'
+    fill_in 'Name', :with => 'category name'
     click_button 'Create Group'
-    expect(page).to have_content 'Category:'
+    expect(page).to have_content 'New Category has been created in the Cookbook'
   end
 end

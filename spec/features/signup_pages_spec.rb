@@ -7,8 +7,8 @@ describe "signing up" do
     fill_in 'Email', :with => 'user@example.com'
     fill_in 'Password', :with => 'password'
     fill_in 'Password confirmation', :with => 'password'
-    click_button 'Create User'
-    expect(page).to have_content 'Welcome to'
+    click_button 'Create Account'
+    expect(page).to have_content 'Account successfully created'
   end
 
   it "show an error with a blank name field." do
@@ -16,7 +16,7 @@ describe "signing up" do
     fill_in 'Email', :with => 'user@example.com'
     fill_in 'Password', :with => 'password'
     fill_in 'Password confirmation', :with => 'password'
-    click_button 'Create User'
+    click_button 'Create Account'
     expect(page).to have_content "can't be blank"
   end
 
@@ -24,7 +24,7 @@ describe "signing up" do
     visit 'signup'
     fill_in 'Name', :with => 'username'
     fill_in 'Email', :with => 'user@example.com'
-    click_button 'Create User'
+    click_button 'Create Account'
     expect(page).to have_content "can't be blank"
   end
 
@@ -33,7 +33,7 @@ describe "signing up" do
     fill_in 'Name', :with => 'username'
     fill_in 'Password', :with => 'password'
     fill_in 'Password confirmation', :with => 'password'
-    click_button 'Create User'
+    click_button 'Create Account'
     expect(page).to have_content "can't be blank"
   end
 end

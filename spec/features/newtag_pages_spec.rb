@@ -1,3 +1,5 @@
+require 'rails_helper'
+
 describe "new tag form page" do
 
   it "should create a new tag if all the fields are filled in." do
@@ -6,18 +8,18 @@ describe "new tag form page" do
     fill_in 'Email', :with => 'user@example.com'
     fill_in 'Password', :with => 'password'
     click_button 'Log In'
-    expect(page).to have_content "Welcome"
-    click_link 'Create a new Recipe'
+    expect(page).to have_content "Logged in as"
+    click_link 'Create a New Recipe'
     expect(page).to have_content "Add a new Recipe"
-    fill_in 'name', :with => 'recipe name'
-    fill_in 'ingredients', :with => 'ingredients'
-    fill_in 'instructions', :with => 'instructions'
+    fill_in 'Name', :with => 'recipe name'
+    fill_in 'Ingredients', :with => 'ingredients'
+    fill_in 'Instructions', :with => 'instructions'
     click_button 'Create Recipe'
-    expect(page).to have_content 'recipe has been added'
-    click_link 'Tag this recipe to a Category'
-    expect(page).to have_content "Add this Recipe to a Category:"
-    select("option you want to select from menu", :from => :group_id)
+    expect(page).to have_content 'Your recipe has been added to the Cookbook'
+    click_link 'Tag this Recipe to a Category'
+    expect(page).to have_content "Add this Recipe to a Category"
+    select('option', :from => :group_id)
     click_button 'Create Tag'
-    expect(page).to have_content 'Categories and the Recipes under them:'
+    expect(page).to have_content 'You have successfully tagged this recipe'
   end
 end
