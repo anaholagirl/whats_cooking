@@ -7,20 +7,28 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <div id="wrapper">
 
-  <%= render 'layouts/header' %>
+    <div id="header">
+      <%= render 'layouts/header' %>
+    </div>
 
-
-
-
- <p class="bg-success", id="notice"><%= flash[:notice] %></p>
-  <p class="bg-danger", id="alert"><%= flash[:alert] %></p>
-
-<%= yield %>
+    <div id="content">
 
 
-  <%= render 'layouts/footer' %>
 
+      <p class="bg-success", id="notice"><%= flash[:notice] %></p>
+      <p class="bg-danger", id="alert"><%= flash[:alert] %></p>
 
+      <%= yield %>
+
+    </div>
+
+    <div id="footer">
+
+      <%= render 'layouts/footer' %>
+
+    </div>
+  </div>
 </body>
 </html>

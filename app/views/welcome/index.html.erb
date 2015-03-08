@@ -15,5 +15,28 @@
       <h3>Recipes</h3>
       <%= link_to "Check out all of our Recipes", recipes_path %>
     </div>
+
+    <div class="col-md-4 welcome-box">
+      <div class="feature_recipe">
+        <% @recipeArray = [] %>
+        <% Recipe.all.each do |recipe| %>
+          <% @recipeArray << recipe %>
+        <% end %>
+        <% if @recipeArray != [] %>
+          <% @sample = @recipeArray.sample %>
+            <p><%= @sample.name %></p>
+            <span class="ingredients"><p><% ingredients = @sample.ingredients.split(',') %>
+              <% ingredients.each do |ingredient| %>
+                <li><%= ingredient %></li>
+              <% end %></p>
+            <p><%= @sample.instructions %></p></span>
+        <% else %>
+            <p>Enter a recipe so we can feature it!</p>
+        <% end %>
+      </div>
+      <h3>Feature Recipe</h3>
+      <p>Check out a sample recipe</p>
+    </div>
+
   </div>
 </div>
