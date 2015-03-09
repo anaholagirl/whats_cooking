@@ -2,9 +2,10 @@
 <!--   <div class="col-md-4" id="border-left">
     <%= image_tag("border.jpg") %>
   </div> -->
+  <div class="row">
   <h2 id="category_header">My Categories and the Recipes under them: </h2>
 
-  <div class="category_show_box">
+  <div class="col-md-4 category_show_box">
 
     <% current_user.groups.each do |group| %>
       <ul>
@@ -22,5 +23,6 @@
 <!--   <div class="col-md-4" id="border-right">
     <%= image_tag("border.jpg") %>
   </div> -->
+  </div>
 </div>
 

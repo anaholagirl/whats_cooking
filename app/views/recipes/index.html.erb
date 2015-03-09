@@ -1,17 +1,17 @@
 <% content_for(:title, "Home | Recipes") %>
 
 <div class='container'>
-  <div class="search_row">
-    <div class="search_for_recipes" id="recipe_search">
-      <p id="search_by"> Search Recipes by Ingredient</p>
+  <div class="row">
+
+    <div class="col-md-12 search_for_recipes" id="recipe_search">
       <p><%= form_tag recipes_path, method: :get, remote: true do %>
         <%= text_field_tag :search, params[:search] %>
-        <%= submit_tag "Search for Recipes", name: nil, class: "btn btn-success btn-sm" %></p>
+        <%= submit_tag "Search for Recipes by Ingredient", name: nil, class: "btn btn-success btn-sm" %></p>
       <% end %>
     </div>
-  </div>
-  </div>
-  <div class="row">
+
+
+
     <div class='col-md-4 all_recipes_show' style='column-count:2'>
       <div id="recipes_show_search", remote: true>
       <h1 class="all-recipe-header">All Recipes</h1>
