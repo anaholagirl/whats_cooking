@@ -5,10 +5,10 @@ class Recipe < ActiveRecord::Base
   validates :instructions, presence: true
 
   belongs_to :user
-  has_many :tags
-  has_many :groups, through: :tags
-  has_many :favorites
-  has_many :photos
+  has_many :tags, dependent: :destroy
+  has_many :groups, through: :tags, dependent: :destroy
+  has_many :favorites, dependent: :destroy
+  has_many :photos, dependent: :destroy
 
 
   def self.basic_search(find)

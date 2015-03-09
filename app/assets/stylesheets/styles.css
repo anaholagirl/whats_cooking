@@ -257,7 +257,8 @@ Recipes show page
 
 .photo_show {
   margin-top: 35px;
-  padding: 10px;
+  margin-right: 20px;
+  padding: 5px;
 }
 
 
@@ -335,20 +336,29 @@ Photos new page
 Category/group index page
 *******************************/
 
+#category_header {
+  font-family: Lucida Calligraphy;
+  font-weight: bold;
+}
+
 .category_show_box {
-  max-width: 400px;
+
+  text-align: center;
+  font-size: 1.25em;
+  font-family: Lucida Calligraphy;
+  font-weight: bold;
+
+/*  max-width: 400px;
   padding-left: 20px;
   padding-bottom: 30px;
   margin-top: 75px;
-/*  margin-left: 400px;
-  margin-right: 425px;*/
   background-image: url('http://img.photobucket.com/albums/v221/whitetulips/beige-seamless-wallpaper.jpg');
   font-size: 1.5em;
   border: 3px green solid;
   border-radius: 15px;
   font-family: Apple Chancery;
   font-weight: bold;
-}
+*/}
 
 
 /******************************
