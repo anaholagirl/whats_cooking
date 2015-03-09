@@ -7,7 +7,13 @@ since already created main css for mobile)
 
 @media screen and (min-width: 480px) {
 
+#recipe_gallery {
+  width: 45%;
+}
 
+#category_gallery {
+  width: 45%;
+}
 
 }
 
@@ -19,5 +25,20 @@ at least min width of 660px
 
 @media screen and (min-width: 660px) {
 
+#recipe_gallery {
+  width: 28.3333%;
+}
+
+#recipe_gallery:nth-child(4n) {
+  clear: left;
+}
+
+#category_gallery {
+  width: 28.3333%;
+}
+
+#category_gallery:nth-child(4n) {
+  clear: left;
+}
 
 }

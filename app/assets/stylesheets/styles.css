@@ -213,18 +213,20 @@ Recipes home page
 }
 
 .all_recipes_show {
-  margin-top: 35px;
+/*  margin-top: 35px;
   border: 3px green solid;
   border-radius: 15px;
   padding: 10px;
-  background-image: url('http://img.photobucket.com/albums/v221/whitetulips/beige-seamless-wallpaper.jpg');
+  background-image: url('http://img.photobucket.com/albums/v221/whitetulips/beige-seamless-wallpaper.jpg');*/
   font-family: Apple Chancery;
   font-weight: bold;
   font-size: 1.5em;
 }
 
 .search_for_recipes {
-  margin-top: 35px;
+  display: inline-block;
+  float: right;
+/*  margin-top: 35px;
   border: 3px green solid;
   border-radius: 15px;
   padding: 10px;
@@ -232,7 +234,12 @@ Recipes home page
   font-family: Apple Chancery;
   font-weight: bold;
   font-size: 1.5em;
-  text-align: center;
+  text-align: center;*/
+}
+
+#search_by {
+  float: left;
+  font-size: 15px;
 }
 
 .clear_search {
@@ -311,11 +318,13 @@ Photos new page
 *******************************/
 
 .new_photo_box {
-  max-width: 400px;
-  padding: 19px 29px 29px;
-  margin-top: 75px;
-  margin-left: 400px;
-  margin-right: 425px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 350px;
+  height: 375px;
+  margin-top: 0px; /* Half the height */
+  margin-left: -175px; /* Half the width */
   background-image: url('http://img.photobucket.com/albums/v221/whitetulips/beige-seamless-wallpaper.jpg');
   text-align: center;
   font-size: 1.5em;
@@ -323,6 +332,7 @@ Photos new page
   border-radius: 15px;
   font-family: Apple Chancery;
   font-weight: bold;
+
 }
 
 #add_photo_form {
@@ -342,23 +352,15 @@ Category/group index page
 }
 
 .category_show_box {
-
   text-align: center;
   font-size: 1.25em;
   font-family: Lucida Calligraphy;
   font-weight: bold;
+}
 
-/*  max-width: 400px;
-  padding-left: 20px;
-  padding-bottom: 30px;
-  margin-top: 75px;
-  background-image: url('http://img.photobucket.com/albums/v221/whitetulips/beige-seamless-wallpaper.jpg');
-  font-size: 1.5em;
-  border: 3px green solid;
-  border-radius: 15px;
-  font-family: Apple Chancery;
-  font-weight: bold;
-*/}
+#category_gallery {
+
+}
 
 
 /******************************
@@ -366,19 +368,21 @@ Category/group new page
 *******************************/
 
 .new_category_box {
-  max-width: 400px;
-  padding: 19px 29px 29px;
- /* margin-top: 150px;
-  margin-left: 400px;
-  margin-right: 425px;
- */ background-image: url('http://img.photobucket.com/albums/v221/whitetulips/beige-seamless-wallpaper.jpg');
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 350px;
+  height: 375px;
+  margin-top: 0px; /* Half the height */
+  margin-left: -175px; /* Half the width */
+  background-image: url('http://img.photobucket.com/albums/v221/whitetulips/beige-seamless-wallpaper.jpg');
   text-align: center;
   font-size: 1.5em;
   border: 3px green solid;
   border-radius: 15px;
   font-family: Apple Chancery;
   font-weight: bold;
-  margin-top: 175px;
+
 }
 
 
@@ -446,11 +450,13 @@ Tag new page
 *******************************/
 
 .new_tag_box {
-  max-width: 400px;
-  padding: 19px 29px 29px;
-  margin-top: 150px;
-/*  margin-left: 400px;
-  margin-right: 425px;*/
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 350px;
+  height: 300px;
+  margin-top: 30px; /* Half the height */
+  margin-left: -175px; /* Half the width */
   background-image: url('http://img.photobucket.com/albums/v221/whitetulips/beige-seamless-wallpaper.jpg');
   text-align: center;
   font-size: 1.5em;

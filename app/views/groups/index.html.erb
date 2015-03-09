@@ -4,16 +4,18 @@
   </div> -->
   <h2 id="category_header">My Categories and the Recipes under them: </h2>
 
-  <div class="col-md-4 category_show_box">
+  <div class="category_show_box">
 
     <% current_user.groups.each do |group| %>
       <ul>
+        <div id="category_gallery">
         <li><%= group.name %></li>
           <% group.recipes.each do |recipe| %>
             <ul>
               <li><%= link_to recipe.name, recipe_path(recipe) %></li>
             </ul>
           <% end %>
+          </div>
       </ul>
     <% end %>
   </div>

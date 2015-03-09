@@ -1,6 +1,16 @@
 <% content_for(:title, "Home | Recipes") %>
 
 <div class='container'>
+  <div class="search_row">
+    <div class="search_for_recipes" id="recipe_search">
+      <p id="search_by"> Search Recipes by Ingredient</p>
+      <p><%= form_tag recipes_path, method: :get, remote: true do %>
+        <%= text_field_tag :search, params[:search] %>
+        <%= submit_tag "Search for Recipes", name: nil, class: "btn btn-success btn-sm" %></p>
+      <% end %>
+    </div>
+  </div>
+  </div>
   <div class="row">
     <div class='col-md-4 all_recipes_show' style='column-count:2'>
       <div id="recipes_show_search", remote: true>
@@ -8,7 +18,7 @@
       <% Recipe.all.sort.each do |recipe| %>
         <ul>
           <% if recipe.photos.any? %>
-            <div class='recipe_thumb' >
+            <div class='recipe_thumb' id="recipe_gallery">
               <li><% recipe.photos.each do |photo| %>
                 <%= image_tag(photo.image.url(:thumb)) %>
               <% end %>
@@ -22,15 +32,6 @@
       </div>
     </div>
 
-    <div class="col-md-4" id="recipe_search">
-      <div class="search_for_recipes">
-        <h1>Search Recipes by Ingredient</h1>
-        <%= form_tag recipes_path, method: :get, remote: true do %>
-          <p><%= text_field_tag :search, params[:search] %></p>
-          <p><%= submit_tag "Search for Recipes", name: nil, class: "btn btn-success btn-lg" %></p>
-        <% end %>
-      </div>
-    </div>
   </div>
 </div>
 
