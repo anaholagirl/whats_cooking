@@ -8,7 +8,7 @@
         <% if current_user != nil %>
           <%= link_to "My Recipe Book", user_path(current_user), :class => 'btn btn-warning btn-md' %>
           <%= link_to "My Categories", user_groups_path(current_user), :class => 'btn btn-warning btn-md' %>
-          <%= link_to "My Favorites", recipe_favorites_path(current_user), :class => 'btn btn-warning btn-md' %>
+          <%= link_to "My Favorites", user_favorites_path(current_user), :class => 'btn btn-warning btn-md' %>
         <% end %>
       </div>
       <div class="nav-right" id="signin">

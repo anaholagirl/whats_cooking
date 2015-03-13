@@ -11,6 +11,7 @@ Rails.application.routes.draw do
 
   resources :users do
     resources :groups
+    resources :favorites
   end
 
   resources :recipes do
